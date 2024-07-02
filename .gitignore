@@ -20,5 +20,6 @@
 # Go workspace file
 go.work
 go.work.sum
+
 cookies.json
 .DS_Store

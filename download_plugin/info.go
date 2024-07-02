@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
 )
 
 func getLiveRoomPublicInfo(roomId, liveUuid string, Thread int) {
@@ -63,6 +64,10 @@ func getLiveRoomPublicInfo(roomId, liveUuid string, Thread int) {
 
 	title := result["openLiveDetailModel"].(map[string]interface{})["title"].(string)
 	playbackUrl := result["openLiveDetailModel"].(map[string]interface{})["playbackUrl"].(string)
+
+	// 获取当前时间并格式化
+	currentTime := time.Now().Format("2006-01-02 15:04:05")
+	title += "_" + currentTime
 
 	fmt.Println("标题:", title)
 	fmt.Println("请求网址:", playbackUrl)
