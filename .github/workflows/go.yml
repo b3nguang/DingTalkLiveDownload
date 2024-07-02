@@ -28,7 +28,8 @@ jobs:
 
     - name: Build
       run: |
-        GOOS=${{ matrix.os-arch.os }} GOARCH=${{ matrix.os-arch.arch }} go build -v -o ./bin/app-${{ matrix.os-arch.os }}-${{ matrix.os-arch.arch }} ./...
+        mkdir -p ./bin/${{ matrix.os-arch.os }}-${{ matrix.os-arch.arch }}
+        GOOS=${{ matrix.os-arch.os }} GOARCH=${{ matrix.os-arch.arch }} go build -v -o ./bin/${{ matrix.os-arch.os }}-${{ matrix.os-arch.arch }}/ ./...
 
     - name: Test
       run: go test -v ./...
