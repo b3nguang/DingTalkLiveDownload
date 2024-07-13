@@ -34,7 +34,11 @@ cd DingTalkLiveDownload
 获取钉钉分享回放链接-复制链接-打开命令行窗口-执行以下命令
 
 ```bash
+# MacOS运行
 ./DingTalkLiveDownload_darwin_arm64 -u "https://n.dingtalk.com/dingding/live-room/index.html?roomId=xxx&liveUuid=xxx"
+
+# Windows运行
+./DingTalkLiveDownload_windows_amd64.exe -u "https://n.dingtalk.com/dingding/live-room/index.html?roomId=xxx&liveUuid=xxx"
 ```
 
 ## 免责声明
