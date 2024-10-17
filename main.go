@@ -1,7 +1,7 @@
 package main
 
 import (
-	"DingtalkLive/m3u8_plugin"
+	"github.com/b3nguang/DingTalkLiveDownload/m3u8_plugin"
 	"context"
 	"fmt"
 	"github.com/chromedp/cdproto/network"
